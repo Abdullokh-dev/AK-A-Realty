@@ -169,7 +169,7 @@ button {
 .btn-wt .__text, .btn-tg .__text {
     color: white;
     font-size: 18px;
-    letter-spacing: 0.28px;
+    letter-spacing: 0.36px;
     margin-right: 12px;
 }
 
@@ -194,7 +194,7 @@ button {
 
 .btn-mobile-rate .__text {
     font-size: 9px;
-    margin: 14px 4px 0 4px !important;
+    margin: 15px 4px 0 4px !important;
     font-family: Roboto, sans-serif;
 }
 
