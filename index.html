@@ -4,10 +4,38 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A REALTY</title>
+    <link rel="stylesheet" href="/src/assets/css/aos.css" />
+    <title> Купить, продать, обменять квартиру. Недвижимость в Ярославле</title>
+    <meta name="description" content="Любые операции с жилой недвижимостью: продажа, покупка, обмен. Предложим лучшие варианты для вас. Работаем с 2017 года и за это время помогли уже более 200 клиентам. Бесплатная консультация по вопросам жилой недвижимости в Ярославле.">
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
+    <script src="/src/assets/js/aos.js"></script>
+    <script>
+      console.log('2')
+      AOS.init({duration: 500, once: true, mirror: false})
+
+      function formatPhoneNumber(input) {
+        let value = input.value.replace(/\D/g, ""); // Remove non-numeric characters
+
+        if (value.length > 0) {
+          if (!value.startsWith("7")) {
+            value = "7" + value.substring(1); // Ensure number starts with "7"
+          }
+        }
+
+        const formattedValue = value.replace(/(\d{1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/, function(_, g1, g2, g3, g4, g5) {
+          let formatted = "+7 ";
+          if (g2) formatted += "(" + g2;
+          if (g3) formatted += ") " + g3;
+          if (g4) formatted += "-" + g4;
+          if (g5) formatted += "-" + g5;
+          return formatted;
+        });
+
+        input.value = formattedValue;
+      }
+    </script>
   </body>
 </html>
