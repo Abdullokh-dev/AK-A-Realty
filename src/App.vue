@@ -112,7 +112,7 @@
           <div class="col-10 col-xxl-9 p-0">
 
             <div class="row info-content">
-              <div class="col-6 col-xxl-3">
+              <div class="col-5 col-xxl-3">
                 <span class="num">6+</span><br>
                 <span class="info">лет на рынке</span>
               </div>
@@ -124,7 +124,7 @@
                 </div>
               </div>
 
-              <div class="col-6 col-xxl-3 d-flex justify-content-start justify-content-xxl-center">
+              <div class="col-5 col-xxl-3 d-flex justify-content-start justify-content-xxl-center">
                 <a href="https://www.avito.ru/yaroslavl/predlozheniya_uslug/rieltor_yaroslavl_1834829717" target="_blank" class="box">
                   <img src="./assets/images/avito.png" width="206" alt="#" class="store-1">
                   <div class="rate">

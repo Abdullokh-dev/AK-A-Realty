@@ -45,6 +45,11 @@
     font-size: 33px;
 }
 
+.phone a {
+    color: #0A2F4C;
+}
+
+
 .tel {
     opacity: 1 !important;
     position: relative;
@@ -66,10 +71,6 @@
 .tel:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
-}
-
-.phone a {
-    color: #0A2F4C;
 }
 
 .logo svg {
@@ -193,8 +194,8 @@ button {
 
 .btn-mobile-rate .__text {
     font-size: 9px;
-    margin: 0 4px;
-    height: 9px
+    margin: 14px 4px 0 4px !important;
+    font-family: Roboto, sans-serif;
 }
 
 .avito-mobile {
@@ -206,6 +207,11 @@ button {
     font-family: 'BlissPro', sans-serif;
     font-weight: 500;
     line-height: 95%;
+    transition: background .3s;
+}
+
+.btn-form:hover {
+    background: rgba(255, 197, 0, 0.7);
 }
 
 @media screen and (max-width: 1399px) {
