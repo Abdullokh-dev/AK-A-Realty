@@ -45,6 +45,29 @@
     font-size: 33px;
 }
 
+.tel {
+    opacity: 1 !important;
+    position: relative;
+}
+
+.tel:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #0A2F4C;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.tel:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 .phone a {
     color: #0A2F4C;
 }
