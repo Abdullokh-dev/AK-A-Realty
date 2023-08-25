@@ -1,5 +1,21 @@
 <script setup>
+import {onMounted, ref} from "vue";
 
+const modalContainer = ref('');
+const closeModalBtn = ref('');
+
+
+onMounted(() => {
+  modalContainer.value = document.getElementById('modalContainer');
+  closeModalBtn.value = document.getElementById('closeModalBtn');
+})
+function submitForm() {
+  modalContainer.value.style.display = 'flex';
+}
+
+function close() {
+  modalContainer.value.style.display = 'none';
+}
 </script>
 
 <template>
@@ -8,6 +24,20 @@
   <div class="bg-radius"></div>
 
   <div class="container-fluid position-relative h-fill">
+
+    <!-- Modal -->
+    <div class="modal-container" id="modalContainer" style="display: none;" data-aos="zoom-in">
+      <div class="modal-content mx-3">
+        <span class="close-button" id="closeModalBtn" @click="close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="57" height="58" viewBox="0 0 57 58" fill="none">
+            <path d="M14.1421 43.1421L42.4264 14.8578" stroke="#0A2F4C"/>
+            <path d="M42.4263 43.1421L14.142 14.8578" stroke="#0A2F4C"/>
+          </svg>
+        </span>
+        <p>Спасибо, мы свяжемся с вами <br> в ближайшее время!</p>
+      </div>
+    </div>
+
     <div class="row d-flex justify-content-center header-row" data-aos="fade-down">
       <div class="col-12 col-sm-11 col-md-11">
         <!-- Header -->
@@ -112,13 +142,13 @@
           <div class="col-10 col-xxl-9 p-0">
 
             <div class="row info-content">
-              <div class="col-5 col-xxl-3">
+              <div class="col-5 col-xxl-2">
                 <span class="num">6+</span><br>
                 <span class="info">лет на рынке</span>
               </div>
 
-              <div class="col-6 col-xxl-3">
-                <div>
+              <div class="col-6 col-xxl-4 ps-xxl-5">
+                <div class="ps-xxl-2">
                   <span class="num">200+</span><br>
                   <span class="info">довольных клиентов</span>
                 </div>
@@ -189,7 +219,7 @@
           <div class="col-12 col-xxl-9">
             <div class="row d-flex justify-content-center bg-warning mb-md-5">
               <div class="col-12 col-sm-11 col-md-12 px-0">
-                <form class="txt-light">
+                <form class="txt-light" @submit.prevent="submitForm">
                   <div class="row">
                     <div class="col-12 p-0">
                       <p class="label bold"> Оставьте свои контакты, <br>
@@ -206,7 +236,7 @@
                     </div>
 
                     <div class="col-12 col-xxl-4 px-0 ps-xxl-3">
-                      <button type="submit" class="md-txt txt-light btn-form">
+                      <button type="submit" class="md-txt txt-light btn-form" id="showModalBtn">
                         Получить бесплатную консультацию!
                       </button>
                     </div>
