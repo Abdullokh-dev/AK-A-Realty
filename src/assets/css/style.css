@@ -169,8 +169,7 @@
 
 .green {
     color: #2AAC77;
-    margin-top: 15px!important;
-    height: 11px;
+    margin: 15px 4px 0 4px !important;
 }
 
 .label {
@@ -233,8 +232,9 @@ button {
 
 .btn-mobile-rate .__text {
     font-size: 9px;
-    margin: 15px 4px 0 4px;
+    margin: 0.9375rem 6px 0 5px;
     font-family: Roboto, sans-serif;
+    line-height: 12px;
 }
 
 .btn-mobile-rate .avito-mobile {
