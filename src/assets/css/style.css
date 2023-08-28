@@ -169,7 +169,8 @@
 
 .green {
     color: #2AAC77;
-    margin: 15px 4px 0 4px !important;
+    margin-right: 4px !important;
+    margin-left: 4px !important;
 }
 
 .label {
@@ -232,22 +233,24 @@ button {
 
 .btn-mobile-rate .__text {
     font-size: 9px;
-    margin: 0.9375rem 6px 0 5px;
+    margin-right: 5px;
+    margin-left: 6px;
     font-family: Roboto, sans-serif;
-    line-height: 12px;
+    line-height: 40px;
 }
 
 .btn-mobile-rate .avito-mobile {
-    margin-top: 13px;
+    line-height: 40px;
+    display: flex;
+    margin:  auto 0;
 }
 
 .btn-mobile-rate .domclick {
     max-width: 47px;
-    margin-top: 15px;
 }
 
 .btn-mobile-rate svg {
-    margin-top: 16px;
+    line-height: 40px;
 }
 
 .avito-mobile {
