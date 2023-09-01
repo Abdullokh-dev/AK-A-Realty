@@ -236,11 +236,11 @@ button {
     margin-right: 5px;
     margin-left: 6px;
     font-family: Roboto, sans-serif;
-    line-height: 40px;
+    line-height: 38px;
 }
 
 .btn-mobile-rate .avito-mobile {
-    line-height: 40px;
+    line-height: 38px;
     display: flex;
     margin:  auto 0;
 }
@@ -250,7 +250,7 @@ button {
 }
 
 .btn-mobile-rate svg {
-    line-height: 40px;
+    line-height: 38px;
 }
 
 .avito-mobile {
