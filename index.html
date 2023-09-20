@@ -12,29 +12,15 @@
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
     <script src="/src/assets/js/aos.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="./src/assets/js/maskedinput.js"></script>
+    <script type="text/javascript">
+      jQuery(function($){
+        $("#phone").mask("+7(999) 999-9999");
+      });
+    </script>
     <script>
       AOS.init({duration: 500, once: true, mirror: false})
-
-      function formatPhoneNumber(input) {
-        let value = input.value.replace(/\D/g, ""); // Remove non-numeric characters
-
-        if (value.length > 0) {
-          if (!value.startsWith("7")) {
-            value = "7" + value.substring(1); // Ensure number starts with "7"
-          }
-        }
-
-        const formattedValue = value.replace(/(\d{1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/, function(_, g1, g2, g3, g4, g5) {
-          let formatted = "+7 ";
-          if (g2) formatted += "(" + g2;
-          if (g3) formatted += ") " + g3;
-          if (g4) formatted += "-" + g4;
-          if (g5) formatted += "-" + g5;
-          return formatted;
-        });
-
-        input.value = formattedValue;
-      }
     </script>
   </body>
 </html>

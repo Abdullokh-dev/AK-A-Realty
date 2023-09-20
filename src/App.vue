@@ -238,7 +238,7 @@ function close() {
                     </div>
 
                     <div class="col-12 col-md-6 col-xxl-4 px-0 ps-md-2">
-                      <input type="text" class="md-txt" maxlength="18" placeholder="+7 999 999-99-99" id="phone" oninput="formatPhoneNumber(this)" required>
+                      <input type="text" class="md-txt" maxlength="18" placeholder="+7 999 999-99-99" id="phone" required>
                     </div>
 
                     <div class="col-12 col-xxl-4 px-0 ps-xxl-3">
