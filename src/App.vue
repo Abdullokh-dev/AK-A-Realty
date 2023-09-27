@@ -1,6 +1,9 @@
 <script setup>
 import {onMounted, ref} from "vue";
 
+const name = ref('');
+const phoneNum = ref('');
+
 const modalContainer = ref('');
 const closeModalBtn = ref('');
 
@@ -17,6 +20,8 @@ onMounted(() => {
 })
 
 function submitForm() {
+  name.value = '';
+  phoneNum.value = '';
   modalContainer.value.style.display = 'flex';
 }
 
@@ -107,7 +112,7 @@ function close() {
           </div>
 
           <div class="col d-flex justify-content-end align-self-center">
-            <a href="https://wa.me/+79010408847" target="_blank" class="my-auto d-none d-md-flex">
+            <a href="https://wa.me/+79010493210" target="_blank" class="my-auto d-none d-md-flex">
               <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="30" height="30" rx="15" fill="#25D366"/>
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -116,7 +121,7 @@ function close() {
               </svg>
             </a>
 
-            <a href="https://t.me/+79010408847" target="_blank" class="my-auto d-none d-md-flex tg-icon">
+            <a href="https://t.me/+79010493210" target="_blank" class="my-auto d-none d-md-flex tg-icon">
               <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="my-auto d-none d-md-block">
               <rect width="30" height="30" rx="15" fill="#2AABEE"/>
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -127,7 +132,7 @@ function close() {
 
             <div class="phone">
               <div class="uppercase header-title d-md-none">Агентство недвижимости <br>на Первомайской, 7а</div>
-              <a href="tel:+79010408847" class="tel">+ 7 (901) 040-88-47</a>
+              <a href="tel:+79010493210" class="tel">+ 7 (901) 049-32-10</a>
             </div>
           </div>
         </header>
@@ -161,7 +166,7 @@ function close() {
               </div>
 
               <div class="col-5 col-xxl-3 d-flex justify-content-start justify-content-xxl-center">
-                <a href="https://www.avito.ru/yaroslavl/predlozheniya_uslug/rieltor_yaroslavl_1834829717" target="_blank" class="box">
+                <a href="https://abdullokh.dev" target="_blank" class="box">
                   <img src="./assets/images/avito.png" width="206" alt="#" class="store-1">
                   <div class="rate">
                     <span class="rate__num">5,0</span>
@@ -187,7 +192,7 @@ function close() {
               </div>
 
               <div class="col-6 col-xxl-3 d-flex justify-content-xxl-end">
-                <a href="https://agencies.domclick.ru/agent/5020979" target="_blank" class="box">
+                <a href="https://abdullokh.dev" target="_blank" class="box">
                   <img src="./assets/images/domclick.png" width="300" alt="#" class="store-2">
                   <div class="rate">
                     <span class="rate__num green">5,0</span>
@@ -234,11 +239,11 @@ function close() {
                     </div>
 
                     <div class="col-12 col-md-6 col-xxl-4 px-0 pe-md-2">
-                      <input type="text" placeholder="Ваше имя" class="md-txt" required>
+                      <input type="text" placeholder="Ваше имя" class="md-txt" v-model="name" required>
                     </div>
 
                     <div class="col-12 col-md-6 col-xxl-4 px-0 ps-md-2">
-                      <input type="text" class="md-txt" maxlength="18" placeholder="+7 999 999-99-99" id="phone" required>
+                      <input type="text" class="md-txt" maxlength="18" placeholder="+7 999 999-99-99" v-model="phoneNum" id="phone" required>
                     </div>
 
                     <div class="col-12 col-xxl-4 px-0 ps-xxl-3">
@@ -261,7 +266,7 @@ function close() {
 
         <div class="row">
           <div class="col-6">
-            <a href="https://wa.me/+79010408847" target="_blank" class="btn-wt d-flex justify-content-center">
+            <a href="https://wa.me/+79010493210" target="_blank" class="btn-wt d-flex justify-content-center">
               <span class="my-auto __text">WhatsApp</span>
               <span class="my-auto d-flex">
               <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -271,7 +276,7 @@ function close() {
             </a>
           </div>
           <div class="col-6">
-            <a href="https://t.me/+79010408847" target="_blank" class="btn-tg d-flex justify-content-center">
+            <a href="https://t.me/+79010493210" target="_blank" class="btn-tg d-flex justify-content-center">
               <span class="my-auto __text">Telegram</span>
               <span class="my-auto d-flex">
               <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -282,7 +287,7 @@ function close() {
           </div>
 
           <div class="col-6 mb-4">
-            <a href="https://www.avito.ru/yaroslavl/predlozheniya_uslug/rieltor_yaroslavl_1834829717" target="_blank" class="d-flex justify-content-center btn-mobile-rate">
+            <a href="https://abdullokh.dev" target="_blank" class="d-flex justify-content-center btn-mobile-rate">
               <div class="d-flex my-auto">
                 <img src="./assets/images/avito.png" alt="#" class="avito-mobile">
               </div>
@@ -299,7 +304,7 @@ function close() {
             </a>
           </div>
           <div class="col-6 mb-4">
-            <a href="https://agencies.domclick.ru/agent/5020979" target="_blank" class="d-flex justify-content-center btn-mobile-rate">
+            <a href="https://abdullokh.dev" target="_blank" class="d-flex justify-content-center btn-mobile-rate">
               <div class="d-flex my-auto">
                 <img src="./assets/images/domclick.png" alt="#" class="domclick">
               </div>
